@@ -1,0 +1,130 @@
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85vh;
+    width: 35vw;
+    background-color: rgba(5, 5, 5, 0.3); 
+    border-radius: 10px;
+    border: 1px solid gold; /* Fix: Correct border shorthand */
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Center the container in the viewport */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: 
+    url('https://home.openweathermap.org/assets/history_banner-3e72b47aa91f9e874b5e56197a88feacafd37ad4eaccfa3974302b37004ec7f5.png') 
+    no-repeat 
+    center center / cover 
+    fixed;
+}
+
+/* Input field responsiveness */
+.weather input {
+    padding: 20px;
+    margin-top: 25px;
+    width: 80%; /* Make it responsive */
+    max-width: 400px;
+    border-radius: 30px;
+    border: none;
+}
+
+/* Responsive location section */
+.location {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 10px;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: gold;
+    text-align: center;
+}
+
+.location span {
+    font-size: 2.5rem; 
+    margin: 0 10px;
+}
+
+.temp, .wind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.temp {
+    height: auto;
+}
+
+.wind {
+    height: auto;
+}
+
+.t1, .t2, .t3 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    height: auto;
+    padding: 1rem;
+    background-image: url('https://images.pexels.com/photos/1816823/pexels-photo-1816823.jpeg?auto=compress&cs=tinysrgb&w=400');
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .weather {
+        height: auto;
+        width: 90%; /* Make container full-width on smaller screens */
+    }
+
+    .weather input {
+        width: 90%; /* Increase input field width */
+    }
+
+    .location span {
+        font-size: 2rem; /* Reduce icon size */
+    }
+
+    .user {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .weather {
+        width: 95%; /* Adjust container for very small screens */
+        padding: 10px;
+    }
+
+    .weather input {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .location span {
+        font-size: 1.5rem;
+    }
+
+    .t3 {
+        font-size: 1.5rem; 
+        
+    }
+}
